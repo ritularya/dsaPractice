@@ -44,6 +44,7 @@ vector < int > sortedArray(vector < int > a, vector < int > b) {
 }
 
 int main(){
+    
     //taking num of elements in array from user
     cout<<"Size of the two arrays: ";
     int n;
