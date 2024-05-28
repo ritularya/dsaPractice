@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+
+void bubble_sort(int arr[], int n){
+    //first loop running iteration through the range where adjacent swapping is happening
+    for(int i=n-1;i>0;i--){
+        int swapped=0;
+        for(int j=0;j<i;j++)//iterations for adjacent swapping
+        {
+            if(arr[j]>arr[j+1]){
+            //swap (arr[j],arr[j+1])
+            int temp=arr[j];
+            arr[j]=arr[j+1];
+            arr[j+1]=temp;
+            swapped=1;
+            }
+        }
+        //if already sorted array given, optimizes.
+        if (swapped==0){
+            break;
+        }
+        cout<<"Runs\n";//to see how many times loop is running
+        
+    }
+}
+
+int main()
+{
+    //taking user input
+    int n;
+    cout<<"Enter number of elements: ";
+    cin>>n;
+    
+    int arr[n];
+    cout<<"Enter the elements: ";
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    
+    bubble_sort(arr, n);
+    
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+        
+    }
+    return 0;
+}
