@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+void insertion_sort(int arr[], int n){
+    //loop for each element being checked to see if in correct oorder or not
+    for(int i=0;i<n;i++){
+        int j=i; //starting from the selected element
+        while(j>0 &&arr[j-1]>arr[j]) //comparing the element and the one just on the left
+        {
+            int temp=arr[j]; //swapping if [j-1]>[j]
+            arr[j]=arr[j-1];
+            arr[j-1]=temp;
+            
+            //since elements swapped, descreasing j, as index changed
+            j--;
+        }
+
+    }
+}
+
+int main()
+{
+    //taking user input
+    int n;
+    cout<<"Enter number of elements: ";
+    cin>>n;
+    
+    int arr[n];
+    cout<<"Enter the elements: ";
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    
+    insertion_sort(arr, n);
+    
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+        
+    }
+    return 0;
+}
