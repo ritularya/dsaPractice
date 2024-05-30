@@ -19,8 +19,8 @@ void bubble_sort(int arr[], int n){
         if (swapped==0){
             break;
         }
-        cout<<"Runs\n";//to see how many times loop is running
-        
+        //to see how many times loop is running
+        cout<<"Runs\n";
     }
 }
 
